@@ -5,6 +5,10 @@ import example
 
 # COMMAND ----------
 
+example.devide(5,2)
+
+# COMMAND ----------
+
 import pandas as pd
 import numpy as np
 from pandas_profiling import ProfileReport
@@ -19,11 +23,19 @@ df.head(5)
 
 # COMMAND ----------
 
-display(df)
+df.describe()
 
 # COMMAND ----------
 
 profile = ProfileReport(df, title='Pandas Profiling Report')
+
+# COMMAND ----------
+
+profile.to_widgets()
+
+# COMMAND ----------
+
+import gurobipy
 
 # COMMAND ----------
 
